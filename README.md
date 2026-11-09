@@ -187,4 +187,4 @@ Run the tests: `python -m pytest -q` (offline, ~10 seconds).
 frameworks (Strands, CrewAI, OpenAI Agents SDK, AutoGen); see the
 [agents-workshop](https://github.com/mkabajah/agents-workshop) for Strands and CrewAI versions.
 
-MIT licensed. The CVs are invented.
+Apache-2.0 licensed. The CVs are invented.
