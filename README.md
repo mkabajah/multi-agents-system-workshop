@@ -34,7 +34,7 @@ timeline: open runs/latest.html
 ## Start in 3 minutes
 
 ```bash
-git clone https://github.com/mkabajah/multi-agent-lab && cd multi-agent-lab
+git clone https://github.com/mkabajah/multi-agents-system-workshop && cd multi-agents-system-workshop
 python3.12 -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 cp .env.example .env                                       # MODEL=fake: no key needed
