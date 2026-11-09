@@ -1,9 +1,9 @@
 """
 PATTERN 05 · PARALLEL FAN-OUT (map, then merge)
 
-                         ┌──▶ screener-1 (cand-006.md) ─┐
-    user ──▶ sourcer ────┼──▶ screener-2 (cand-007.md) ─┼──▶ writer ──▶ answer
-                         └──▶ screener-3 (cand-009.md) ─┘
+                         ┌──▶ screener-1 (maya-shapiro.md) ─┐
+    user ──▶ sourcer ────┼──▶ screener-2 (sami-awad.md) ─┼──▶ writer ──▶ answer
+                         └──▶ screener-3 (tamar-klein.md) ─┘
 
 The idea      Split the work into independent pieces and run one agent per piece AT THE SAME TIME
               (asyncio.gather), then merge. Each screener reads only ONE CV, so its context stays small.

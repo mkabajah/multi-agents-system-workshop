@@ -65,7 +65,7 @@ def test_critic_loop_revises_then_approves():
 
 
 def test_router_picks_the_screener_for_an_evidence_question():
-    _, rec, _, _ = run("04", "Check the evidence in cand-006.md")
+    _, rec, _, _ = run("04", "Check the evidence in maya-shapiro.md")
     assert rec.agents() == ["router", "screener"]
 
 

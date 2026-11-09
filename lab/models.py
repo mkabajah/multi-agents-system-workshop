@@ -33,7 +33,10 @@ from lab import config
 SKILLS = ["power bi", "spring boot", "kubernetes", "terraform", "pytorch", "fastapi", "tableau", "docker",
           "kafka", "python", "java", "react", "sql", "aws", "rag", "llm", "go", "excel"]
 CITIES = ["haifa", "tel aviv", "nazareth", "jerusalem", "beersheba", "ramallah"]
-CV_NAME = re.compile(r"cand-\d+(?:-\d{4})?\.md")                 # the practice CV file names
+# The CV file names in data/cvs (e.g. maya-shapiro.md), longest first so "tamar-klein-2023.md" wins
+# over "tamar-klein.md". The fake model uses this to spot CV names in a task or a tool result.
+_CV_FILES = sorted((p.name for p in config.CV_DIR.rglob("*.md")), key=len, reverse=True)
+CV_NAME = re.compile("|".join(re.escape(n) for n in _CV_FILES) or r"(?!x)x")
 BOOK = ("interview", "schedule", "book")
 
 

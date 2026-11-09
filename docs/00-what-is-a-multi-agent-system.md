@@ -7,7 +7,7 @@ An **agent** is a loop around a language model:
 ```
 while True:
     reply = model(conversation, tools)        # the model reads everything so far
-    if reply asks for a tool:                 # "call get_cv('cand-006.md')"
+    if reply asks for a tool:                 # "call get_cv('maya-shapiro.md')"
         result = run that tool
         conversation += reply + result        # and loop again
     else:

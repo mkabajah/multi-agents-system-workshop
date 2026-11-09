@@ -18,11 +18,11 @@ python mas.py run 02
 ➜ lead         lead → sourcer: Find every candidate with: kafka.
    ▶ sourcer      Find every candidate with: kafka.
    🔧 sourcer      find_candidates({'skill': 'kafka', 'city': ''})
-   ✔ sourcer      Found: cand-006.md, cand-007.md, cand-009.md.
-➜ lead         lead → screener: Check the evidence for kafka in cand-006.md, cand-007.md, cand-009.md.
+   ✔ sourcer      Found: maya-shapiro.md, sami-awad.md, tamar-klein.md.
+➜ lead         lead → screener: Check the evidence for kafka in maya-shapiro.md, sami-awad.md, tamar-klein.md.
    ▶ screener     ...
-➜ lead         lead → coordinator: Book an interview for cand-006.md for the backend-engineer job.
-   🔧 coordinator  schedule_interview({'cv': 'cand-006.md', 'job': 'backend-engineer', 'slot': 'Mon 11:00'})
+➜ lead         lead → coordinator: Book an interview for maya-shapiro.md for the backend-engineer job.
+   🔧 coordinator  schedule_interview({'cv': 'maya-shapiro.md', 'job': 'backend-engineer', 'slot': 'Mon 11:00'})
 ✔ lead         ...
 
 agents: 4 · model calls: 13 · tool calls: 6 · 0.1s

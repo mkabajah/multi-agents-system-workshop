@@ -79,11 +79,11 @@ D.events.forEach((e,i)=>{const l=D.lanes[e.lane];
       v.innerHTML=e.kind==='think'?`<span class="t">${e.t}s</span><span class="k">· model call</span>`:`<span class="t">${e.t}s</span><div class="k">${esc(e.label)}</div>${esc(e.text.length>220?e.text.slice(0,217)+'…':e.text)}`;v.title=e.text;cell.appendChild(v);cards.push(v)}
     g.appendChild(cell)}});
 let n=cards.length,timer;const pos=document.getElementById('pos');
-const show=k=>{n=k;cards.forEach((c,i)=>c.classList.toggle('hidden',i>=k));pos.textContent=`step ${k} / ${cards.length}`;if(k>0)cards[k-1].scrollIntoView({block:'nearest',behavior:'smooth'})};
+const show=(k,scroll=true)=>{n=k;cards.forEach((c,i)=>c.classList.toggle('hidden',i>=k));pos.textContent=`step ${k} / ${cards.length}`;if(scroll&&k>0)cards[k-1].scrollIntoView({block:'nearest',behavior:'smooth'})};
 const step=()=>{if(n<cards.length)show(n+1);else clearInterval(timer)};
 document.getElementById('replay').onclick=()=>{clearInterval(timer);show(0);timer=setInterval(step,700)};
 document.getElementById('next').onclick=()=>{clearInterval(timer);if(n>=cards.length)show(0);step()};
 document.getElementById('all').onclick=()=>{clearInterval(timer);show(cards.length)};
 document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')document.getElementById('next').click()});
-show(cards.length);
+show(cards.length,false);   // on load: everything visible, page at the top
 </script></body></html>"""

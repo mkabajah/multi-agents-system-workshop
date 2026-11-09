@@ -11,8 +11,8 @@ Every run prints a live trace and writes `runs/latest.html`. Both show the same 
 ➜ lead         lead → sourcer: Find every candidate with: kafka.   the lead delegates
    ▶ sourcer      Find every candidate with: kafka.           indented = called BY the lead
    🔧 sourcer      find_candidates({'skill': 'kafka'…})        a tool call
-   ← sourcer      { "cv": "cand-006.md" … }                   what the tool returned
-   ✔ sourcer      Found: cand-006.md, …                       the sourcer's final answer…
+   ← sourcer      { "cv": "maya-shapiro.md" … }                   what the tool returned
+   ✔ sourcer      Found: maya-shapiro.md, …                       the sourcer's final answer…
 ✔ lead         …                                               …which goes back to the lead
 ```
 
