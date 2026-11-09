@@ -7,8 +7,6 @@ HTML timeline that replays the run step by step: who did what, who asked whom, a
 Everything runs **offline with no API key** first (a scripted fake model), then with a real model by
 changing one line.
 
-By Mohammad Kabajah · companion to the [agents-workshop](https://github.com/mkabajah/agents-workshop) (Session 2).
-
 ```
 python mas.py run 02
 ```
